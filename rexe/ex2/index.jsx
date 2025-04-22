@@ -2,16 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { combineReducers, createStore } from 'redux'
 import { Provider } from 'react-redux'
-import conutRed from './conutRed'
-import Counter from './counter'
+import Field from './field'
+import fieldRed from './filedRed'
 
 const reducers = combineReducers({
-  counter: conutRed
+  field: fieldRed
 })
 
 ReactDOM.render(
   <Provider store={createStore(reducers)}>
-    <Counter></Counter>
+    <Field initialValue='Teste' />
   </Provider>,
   document.getElementById('app')
 )
